@@ -25,7 +25,6 @@ const InitialValues = {
 
 const Signup = () => {
   const navigate = useNavigate();
-
   const formik = useFormik({
     initialValues: InitialValues,
     validationSchema: SignupSchema,
@@ -42,7 +41,7 @@ const Signup = () => {
         toast.error(`${error?.response?.data?.detail}`, {
           position: "bottom-right",
         });
-        throw error
+        throw error;
       }
     },
   });
